@@ -13,4 +13,9 @@ describe('Util functions', function () {
 			expect(utils.now(new Date(390625))).to.equal('1970-01-01 01:06:30');
 		});
 	});
+	describe('camelJoin()', function () {
+		it('should return weLoveCamelCase', function () {
+			expect(utils.camelJoin('we', 'love', 'CAMEL', 'cAsE')).to.equal('weLoveCamelCase');
+		});
+	});
 });

@@ -25,3 +25,13 @@ function now(d = new Date(), dateOnly = false) {
 	return str;
 }
 module.exports.now = now;
+
+/**
+ * Concatenates string respecting camel case
+ * @param  {...string} str The strings to concatenate 
+ * @returns {string} The concatenated strings
+ */
+function camelJoin(...str) {
+	return str.shift() + str.map(s => cap(s)).join('');
+}
+module.exports.camelJoin = camelJoin;
